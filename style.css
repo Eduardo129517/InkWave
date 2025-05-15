@@ -1,8 +1,78 @@
-body{
-    background-color: rgb(31, 31, 31);   
+/* Fundo do site */
+body {
+    background-color: #000; /* Preto puro */
+    color: #fff; /* Cor padrão de texto */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-.header{
-    width: 50px;
-    height: 50PX;
+
+/* Navbar personalizada */
+.navbar {
+    background-color: #111; /* Preto um pouco mais claro */
+    border-bottom: 1px solid #333;
+}
+
+/* Nome da marca */
+.navbar-brand strong:first-child {
+    color: red;
+}
+
+.navbar-brand strong:last-child {
+    color: white;
+}
+
+/* Botões da navbar */
+.navbar a.btn {
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+/* Efeitos hover */
+.navbar a.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Botão de "Criar Conta" com destaque */
+.btn-dark {
     background-color: red;
+    border-color: red;
+}
+
+.btn-dark:hover {
+    background-color: darkred;
+    border-color: darkred;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hover bonito nos botões */
+.btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+body {
+    background-color: #000;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease;
+}
+
+#navbar {
+    transition: background 0.3s ease;
+}
+
+#logoText {
+    transition: opacity 0.3s ease;
 }
