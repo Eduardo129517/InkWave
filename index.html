@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="imagens/icon.png">
-  <link rel="js" href="scrpit.js"
+  <link rel="js" href="scrpit.js">
 </head>
 
 <body>
@@ -72,9 +72,9 @@
   <br><br>
 
   <div class="container-fluid py-5 text-light" style="background-color: #111;">
-    <div class="row">
-      <div class="col-lg-9 d-flex flex-wrap gap-4 justify-content-center">
-        <div class="manga-card-custom">
+    <div class="row align-items-start">
+      <div class="col-lg-9" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 24px; grid-auto-flow: row;">
+        <div class="manga-card-custom" onclick="devilman()">
           <img src="imagens/capas-manga/devilman-capa.jpg" alt="Devilman">
           <div class="manga-info">
             <h5>Devilman</h5>
@@ -84,7 +84,7 @@
           </div>
         </div>
 
-        <div class="manga-card-custom">
+        <div class="manga-card-custom" onclick="jojolion()">
           <img src="imagens/capas-manga/jojolion-capa.jpg" alt="JoJolion">
           <div class="manga-info">
             <h5>JoJolion</h5>
@@ -95,7 +95,7 @@
         </div>
 
         <div class="manga-card-custom">
-          <img src="imagens/capas-manga/bleach-capa.jpg" alt="Bleach">
+          <img src="imagens/capas-manga/bleach-capa.jpg" alt="Bleach" onclick="Bleach()">
           <div class="manga-info">
             <h5>Bleach</h5>
             <p class="author">Tite Kubo</p>
@@ -143,9 +143,20 @@
             <div class="views"><i class="bi bi-eye"></i> 601870</div>
           </div>
         </div>
+
+        <div class="manga-card-custom">
+          <img src="imagens/capas-manga/boku-no-hero-capa.jpg" alt="Blue Lock">
+          <div class="manga-info">
+            <h5>Blue Lock</h5>
+            <p class="author">Muneyuki Kaneshiro</p>
+            <p class="chapter">#1: Dream</p>
+            <div class="views"><i class="bi bi-eye"></i> 601870</div>
+          </div>
+        </div>  
       </div>
 
-
+      
+      
       <div class="col-lg-3">
         <div class="bg-danger p-3 rounded shadow-sm">
           <div class="d-flex justify-content-between align-items-center mb-2">
@@ -153,109 +164,112 @@
             <a href="#" class="btn btn-sm btn-light">Ver Todos</a>
           </div>
           <ul class="list-unstyled">
+            <!-- Item de ranking -->
             <li class="d-flex mb-3 align-items-center bg-dark rounded p-2">
               <div class="me-2 text-warning fw-bold fs-5">1</div>
-              <img src="imagens/capas-manga/bleach-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
+              <img src="imagens/capas-manga/boruto-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
               <div class="text-white">
-                <strong style="font-size: 0.9em;">Bleach -Death and the Strawberry-</strong>
-                <p class="mb-0" style="font-size: 0.75em;">Tite Kubo</p>
-                <small><i class="bi bi-eye"></i> 950421</small>
+                <strong style="font-size: 0.9em;">Boruto -Two Blue Vortex-</strong>
+                <p class="mb-0" style="font-size: 0.75em;">Masashi Kishimoto</p>
+                <small><i class="bi bi-eye"></i> 349304</small>
               </div>
             </li>
 
             <li class="d-flex mb-3 align-items-center bg-dark rounded p-2">
               <div class="me-2 text-warning fw-bold fs-5">2</div>
-              <img src="imagens/capas-manga/bleach-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
+              <img src="imagens/capas-manga/boruto-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
               <div class="text-white">
-                <strong style="font-size: 0.9em;">Bleach -Death and the Strawberry-</strong>
-                <p class="mb-0" style="font-size: 0.75em;">Tite Kubo</p>
-                <small><i class="bi bi-eye"></i> 950421</small>
+                <strong style="font-size: 0.9em;">Boruto -Two Blue Vortex-</strong>
+                <p class="mb-0" style="font-size: 0.75em;">Masashi Kishimoto</p>
+                <small><i class="bi bi-eye"></i> 349304</small>
               </div>
             </li>
 
             <li class="d-flex mb-3 align-items-center bg-dark rounded p-2">
               <div class="me-2 text-warning fw-bold fs-5">3</div>
-              <img src="imagens/capas-manga/bleach-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
+              <img src="imagens/capas-manga/boruto-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
               <div class="text-white">
-                <strong style="font-size: 0.9em;">Bleach -Death and the Strawberry-</strong>
-                <p class="mb-0" style="font-size: 0.75em;">Tite Kubo</p>
-                <small><i class="bi bi-eye"></i> 950421</small>
+                <strong style="font-size: 0.9em;">Boruto -Two Blue Vortex-</strong>
+                <p class="mb-0" style="font-size: 0.75em;">Masashi Kishimoto</p>
+                <small><i class="bi bi-eye"></i> 349304</small>
               </div>
             </li>
 
             <li class="d-flex mb-3 align-items-center bg-dark rounded p-2">
               <div class="me-2 text-warning fw-bold fs-5">4</div>
-              <img src="imagens/capas-manga/bleach-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
+              <img src="imagens/capas-manga/boruto-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
               <div class="text-white">
-                <strong style="font-size: 0.9em;">Bleach -Death and the Strawberry-</strong>
-                <p class="mb-0" style="font-size: 0.75em;">Tite Kubo</p>
-                <small><i class="bi bi-eye"></i> 950421</small>
+                <strong style="font-size: 0.9em;">Boruto -Two Blue Vortex-</strong>
+                <p class="mb-0" style="font-size: 0.75em;">Masashi Kishimoto</p>
+                <small><i class="bi bi-eye"></i> 349304</small>
               </div>
             </li>
 
             <li class="d-flex mb-3 align-items-center bg-dark rounded p-2">
               <div class="me-2 text-warning fw-bold fs-5">5</div>
-              <img src="imagens/capas-manga/bleach-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
+              <img src="imagens/capas-manga/boruto-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
               <div class="text-white">
-                <strong style="font-size: 0.9em;">Bleach -Death and the Strawberry-</strong>
-                <p class="mb-0" style="font-size: 0.75em;">Tite Kubo</p>
-                <small><i class="bi bi-eye"></i> 950421</small>
+                <strong style="font-size: 0.9em;">Boruto -Two Blue Vortex-</strong>
+                <p class="mb-0" style="font-size: 0.75em;">Masashi Kishimoto</p>
+                <small><i class="bi bi-eye"></i> 349304</small>
               </div>
             </li>
 
             <li class="d-flex mb-3 align-items-center bg-dark rounded p-2">
               <div class="me-2 text-warning fw-bold fs-5">6</div>
-              <img src="imagens/capas-manga/bleach-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
+              <img src="imagens/capas-manga/boruto-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
               <div class="text-white">
-                <strong style="font-size: 0.9em;">Bleach -Death and the Strawberry-</strong>
-                <p class="mb-0" style="font-size: 0.75em;">Tite Kubo</p>
-                <small><i class="bi bi-eye"></i> 950421</small>
+                <strong style="font-size: 0.9em;">Boruto -Two Blue Vortex-</strong>
+                <p class="mb-0" style="font-size: 0.75em;">Masashi Kishimoto</p>
+                <small><i class="bi bi-eye"></i> 349304</small>
               </div>
             </li>
 
             <li class="d-flex mb-3 align-items-center bg-dark rounded p-2">
               <div class="me-2 text-warning fw-bold fs-5">7</div>
-              <img src="imagens/capas-manga/bleach-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
+              <img src="imagens/capas-manga/boruto-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
               <div class="text-white">
-                <strong style="font-size: 0.9em;">Bleach -Death and the Strawberry-</strong>
-                <p class="mb-0" style="font-size: 0.75em;">Tite Kubo</p>
-                <small><i class="bi bi-eye"></i> 950421</small>
+                <strong style="font-size: 0.9em;">Boruto -Two Blue Vortex-</strong>
+                <p class="mb-0" style="font-size: 0.75em;">Masashi Kishimoto</p>
+                <small><i class="bi bi-eye"></i> 349304</small>
               </div>
             </li>
 
             <li class="d-flex mb-3 align-items-center bg-dark rounded p-2">
               <div class="me-2 text-warning fw-bold fs-5">8</div>
-              <img src="imagens/capas-manga/bleach-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
+              <img src="imagens/capas-manga/boruto-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
               <div class="text-white">
-                <strong style="font-size: 0.9em;">Bleach -Death and the Strawberry-</strong>
-                <p class="mb-0" style="font-size: 0.75em;">Tite Kubo</p>
-                <small><i class="bi bi-eye"></i> 950421</small>
+                <strong style="font-size: 0.9em;">Boruto -Two Blue Vortex-</strong>
+                <p class="mb-0" style="font-size: 0.75em;">Masashi Kishimoto</p>
+                <small><i class="bi bi-eye"></i> 349304</small>
               </div>
             </li>
 
             <li class="d-flex mb-3 align-items-center bg-dark rounded p-2">
               <div class="me-2 text-warning fw-bold fs-5">9</div>
-              <img src="imagens/capas-manga/bleach-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
+              <img src="imagens/capas-manga/boruto-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
               <div class="text-white">
-                <strong style="font-size: 0.9em;">Bleach -Death and the Strawberry-</strong>
-                <p class="mb-0" style="font-size: 0.75em;">Tite Kubo</p>
-                <small><i class="bi bi-eye"></i> 950421</small>
+                <strong style="font-size: 0.9em;">Boruto -Two Blue Vortex-</strong>
+                <p class="mb-0" style="font-size: 0.75em;">Masashi Kishimoto</p>
+                <small><i class="bi bi-eye"></i> 349304</small>
               </div>
             </li>
 
             <li class="d-flex mb-3 align-items-center bg-dark rounded p-2">
               <div class="me-2 text-warning fw-bold fs-5">10</div>
-              <img src="imagens/capas-manga/bleach-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
+              <img src="imagens/capas-manga/boruto-capa.jpg" alt="Boruto" width="50" height="70" class="me-2 rounded">
               <div class="text-white">
-                <strong style="font-size: 0.9em;">Bleach -Death and the Strawberry-</strong>
-                <p class="mb-0" style="font-size: 0.75em;">Tite Kubo</p>
-                <small><i class="bi bi-eye"></i> 950421</small>
+                <strong style="font-size: 0.9em;">Boruto -Two Blue Vortex-</strong>
+                <p class="mb-0" style="font-size: 0.75em;">Masashi Kishimoto</p>
+                <small><i class="bi bi-eye"></i> 349304</small>
               </div>
             </li>
+            
+  
+            <!-- Repetir para os outros itens -->
           </ul>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -264,9 +278,15 @@
       <p class="float-right">
         <a href="#" class="text-white">Voltar ao topo</a>
       </p>
+      <div class="text-center mt-4">
+        <small>COPYRIGHT | © InkWave - 2025</small>
+        <br>
+        <small>DESENVOLVIDO POR Eduardo Luis de Squeira.</small>
+      </div>
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scrpit.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {

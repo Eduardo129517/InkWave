@@ -179,89 +179,18 @@ body {
     color: #000;
     text-decoration: none;
   }
-
-  .top10-ranking {
-    background-color: #002bd5; /* vermelho escuro */
-    padding: 20px;
-    border-radius: 10px;
-    color: rgb(255, 255, 0);
-    max-width: 280px;
-    min-width: 250px;
-    font-family: sans-serif;
-  }
-  /*background-color: #7a0d0d
-  color: white*/
-  
-  .top10-ranking h4 {
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: bold;
+  .manga-card-custom {
+    min-height: 300px;
+    max-height: 400px;
   }
   
-  .ver-todos-btn {
-    background-color: #ff00ff;
-    color: rgb(0, 255, 42);
-    padding: 6px 12px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 15px;
-  }
-  /* background-color: #fbbc04
-    color: black*/
-  
-  .ranking-list {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-  }
-  
-  .ranking-list li {
+  .manga-card-custom {
     display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+    flex-direction: column;
+    height: 100%;
   }
   
-  .rank-number {
-    background-color: #0dff00;
-    color: #ff0000;
-    font-weight: bold;
-    padding: 6px 10px;
-    border-radius: 50%;
-    margin-right: 10px;
-    font-size: 14px;
-  }
-  /* background-color: #000 
-   color: #fff*/
   
-  .ranking-list img {
-    width: 50px;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-right: 10px;
-  }
   
-  .rank-info h5 {
-    margin: 0;
-    font-size: 14px;
-    font-weight: bold;
-  }
   
-  .rank-info .author {
-    font-size: 11px;
-    margin: 0;
-    color: #ccc;
-  }
   
-  .rank-info .views {
-    font-size: 12px;
-    margin: 0;
-    color: #ffdd57;
-  }
-  
-  #ruimdebaliza{
-    width: 159px;
-    height: 180px;
-  }

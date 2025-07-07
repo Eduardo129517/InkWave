@@ -1,0 +1,27 @@
+body {
+    background-color: #000;
+    color: white;
+  }
+  
+  .area-manga {
+    padding-top: 130px;
+    padding-bottom: 40px;
+  }
+  
+  .capa-manga {
+    width: 100%;       /* ocupa toda a div disponível */
+    max-width: 300px;  /* imagem maior */
+    border-radius: 10px;
+  }
+  
+  .shadow-box {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    padding: 5px;
+    width: 300px;
+    border-radius: 10px;
+  }
+  
+  /* Reduz espaço horizontal entre imagem e texto */
+  .row {
+    --bs-gutter-x: 1.2rem;
+  }  
