@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📖 Leitor de Mangá - Modo Escuro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .pdf-container {
+            width: 100%;
+            height: 80vh;
+            border: none;
+            background-color: #111;
+        }
+        .page-controls button:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-200 min-h-screen flex flex-col">
+    <header class="py-6 px-4 text-center">
+        <h1 class="text-4xl font-bold mb-2">📖 Leitor de Mangá</h1>
+        <p class="text-xl opacity-80">Leitura no modo escuro</p>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="mx-auto">
+            <iframe id="pdf-viewer" class="pdf-container" src="devilman.pdf"></iframe>
+            
+            <div class="page-controls flex justify-center mt-8 space-x-6">
+                <button onclick="prevPage()" class="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg shadow-lg transition-all">
+                    ← Página Anterior
+                </button>
+                <button onclick="nextPage()" class="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg shadow-lg transition-all">
+                    Próxima Página →
+                </button>
+                <button onclick="toggleFullscreen()" class="bg-blue-900 hover:bg-blue-800 text-white px-6 py-3 rounded-lg shadow-lg transition-all">
+                    Tela Cheia
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-6 text-center text-gray-500 text-sm">
+        <p>© 2023 Leitor de Mangá. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        let currentPage = 1;
+        const pdfViewer = document.getElementById('pdf-viewer');
+        
+        function prevPage() {
+            currentPage = Math.max(1, currentPage - 1);
+            updatePdfViewer();
+        }
+
+        function nextPage() {
+            currentPage++;
+            updatePdfViewer();
+        }
+
+        function updatePdfViewer() {
+            pdfViewer.src = `devilman.pdf#page=${currentPage}`;
+        }
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                pdfViewer.requestFullscreen().catch(err => {
+                    alert(`Erro ao entrar em tela cheia: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        // Initialize with first page
+        updatePdfViewer();
+    </script>
+</body>
+</html>
