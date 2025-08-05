@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /*    background-color: #000;
 color: #fff*/
 
@@ -161,7 +162,8 @@ body {
 }
 
 .btn-premium {
-    background-color: red; /* Cor dourada */
+    background-color: red;
+    /* Cor dourada */
     color: #111;
     font-weight: bold;
     border: none;
@@ -172,25 +174,28 @@ body {
     gap: 6px;
     font-size: 14px;
     transition: background 0.3s ease;
-  }
-  
-  .btn-premium:hover {
+}
+
+.btn-premium:hover {
     background-color: red;
     color: #000;
     text-decoration: none;
-  }
-  .manga-card-custom {
+}
+
+.manga-card-custom {
     min-height: 300px;
     max-height: 400px;
-  }
-  
-  .manga-card-custom {
+}
+
+.manga-card-custom {
     display: flex;
     flex-direction: column;
     height: 100%;
-  }
-  
-  
-  
-  
-  
+}
+
+.bunner-login {
+    width: 110%;
+    height: 140%;
+    object-fit: cover;
+    border-radius: 0.5rem; /* opcional, caso queira cantos arredondados */
+  }  

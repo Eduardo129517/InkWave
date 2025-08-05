@@ -13,7 +13,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- CSS da página inicial -->
-  <link rel="stylesheet" href="../css/estilo.css" />
+  <link rel="stylesheet" href="../style.css" />
 
   <!-- Ícone -->
   <link rel="icon" href="../imagens/icon.png" />
@@ -33,20 +33,22 @@
         </a>
 
         <div class="d-flex align-items-center gap-2">
-            <a href="#" class="btn btn-premium">
-                <i class="bi bi-crown-fill"></i> Premium
-              </a>
+          <a href="#" class="btn btn-premium">
+            <i class="bi bi-crown-fill"></i> Premium
+          </a>
+
           <div class="position-relative">
             <button id="userIcon" class="btn btn-outline-light rounded-circle">
               <i class="bi bi-person"></i>
             </button>
-            <div id="userMenu" class="position-absolute end-0 mt-2 bg-dark text-light border rounded shadow-sm p-2" style="display: none; min-width: 150px; z-index: 1000;">
-              <a href="login.html" class="dropdown-item text-light">Entrar</a>
+
+            <div id="userMenu" class="position-absolute end-0 mt-2 bg-dark text-light border rounded shadow-sm p-2"
+              style="display: none; min-width: 150px; z-index: 1000;">
+              <a href="/login_criar_conta/login.html" class="dropdown-item text-light">Entrar</a>
               <a href="#" class="dropdown-item text-light">Criar Conta</a>
             </div>
           </div>
         </div>
-      </div>
     </nav>
   </header>
 
@@ -55,22 +57,15 @@
     <div class="bg-gray-800 rounded-2xl shadow-2xl flex w-[900px] max-w-full overflow-hidden">
 
       <!-- LADO ESQUERDO -->
-      <div class="w-1/2 bg-gradient-to-b from-gray-900 to-gray-800 text-center p-10 flex flex-col justify-center items-center">
-        <h1 class="text-5xl font-extrabold mb-4 text-white">#1</h1>
-        <p class="text-lg font-light tracking-wider mb-6">Image Generation Platform</p>
-        <div class="text-left w-full mt-auto">
-          <p class="text-sm mb-2"><strong>50M+</strong> Usuários</p>
-          <p class="text-sm mb-2"><strong>1B+</strong> Imagens geradas</p>
-          <p class="text-sm mb-2"><strong>500K+</strong> Modelos</p>
-          <p class="text-sm"><strong>560K+</strong> Personagens AI</p>
-        </div>
-      </div>
+      <div class="w-1/2 h-[600px] bg-gradient-to-b from-gray-900 to-gray-800 text-center p-0 flex">
+        <img src="/imagens/bunner.jpg" alt="bunner" class="bunner-login">
+      </div>      
 
       <!-- LADO DIREITO -->
       <div class="w-1/2 bg-gray-900 p-10">
         <div class="text-center mb-6">
           <img src="../imagens/icon.png" alt="Logo" class="w-10 h-10 mx-auto mb-2" />
-          <h2 class="text-xl font-bold">Login/Registro</h2>
+          <h2 class="text-xl font-bold">Login</h2>
           <p class="text-xs text-gray-400">Ao se registrar, você concorda com nossos <a href="#" class="underline text-blue-400">Termos</a> e <a href="#" class="underline text-blue-400">Política de Privacidade</a>.</p>
         </div>
 
