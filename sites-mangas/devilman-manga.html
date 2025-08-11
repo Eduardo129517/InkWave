@@ -4,16 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InkWave</title>
+    <link rel="icon" href="../imagens/icon.png">
+    <title>InkWave - Devilman</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7OQ5L1Z9Ddbp+zZjzc/uD+2V5DkZyTtmI3U" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="mangas.css">
-    <link rel="icon" href="/imagens/icon.png">
-    <link rel="js" href="scrpit.js">
+
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+        }
+
+        .capa-manga {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 8px;
+        }
+
+        /* Tabs */
+        .nav-tabs .nav-link {
+            color: white;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: #fff;
+            border-color: transparent transparent #ff0000 transparent;
+            border-bottom: 2px solid #ff0000;
+            background: none;
+        }
+
+        /* Lista de capítulos */
+        .chapter-card {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 0;
+        }
+
+        .chapter-img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-right: 15px;
+        }
+
+        .chapter-info {
+            flex-grow: 1;
+        }
+
+        .chapter-date {
+            font-size: 0.85rem;
+            color: gray;
+        }
+    </style>
 </head>
 
 <body>
@@ -48,14 +93,14 @@
         </nav>
     </header>
 
-    <div class="container area-manga">
+    <div class="container area-manga mt-5 pt-5">
         <div class="row align-items-center">
             <!-- Capa do mangá -->
             <div class="col-md-3 d-flex flex-column align-items-center">
                 <div class="shadow-box">
                     <img src="../imagens/capas-manga/devilman-capa.jpg" alt="Devilman" class="capa-manga">
                 </div>
-            
+
                 <!-- Botões abaixo da imagem -->
                 <div class="mt-3 text-center">
                     <a href="#" class="btn btn-outline-light me-2">Primeiro Cap</a>
@@ -69,19 +114,52 @@
                 <p><strong>Autor:</strong> Go Nagai</p>
                 <p><strong>Status:</strong> Completo</p>
                 <p><strong>Gêneros:</strong> Ação, Terror, Sobrenatural</p>
-                <p><strong>Sinopse:</strong> Akira Fudo se torna Devilman ao fundir seu corpo com o de um poderoso demônio, a fim de proteger a humanidade de uma invasão infernal. Com o coração humano e a força de um monstro, ele enfrenta criaturas aterrorizantes enquanto a sociedade desmorona ao seu redor.
-
-                    Mas a batalha não é apenas contra demônios — é contra o medo, o ódio e a natureza destrutiva da própria humanidade. Em meio ao caos, Akira descobre que salvar o mundo pode significar perder tudo o que ama.</p>
-                <p><strong>Aprovação:</strong> </p>
-            </div>
-            <br><br>
-            <div class="linha">
+                <p><strong>Sinopse:</strong> "Devilman" acompanha Akira Fudo, um jovem tímido que se une a um demônio para combater outros demônios que ameaçam a humanidade, mas, ao fundir-se com o monstro, enfrenta conflitos entre sua natureza humana e demoníaca, levando a uma luta brutal entre amor, ódio e o destino do mundo.</p>
             </div>
         </div>
-        <div class="Capítulos">
 
+        <!-- Tabs -->
+        <ul class="nav nav-tabs mt-4" id="mangaTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="chapters-tab" data-bs-toggle="tab" data-bs-target="#chapters"
+                    type="button" role="tab">📖 Capítulos</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="comments-tab" data-bs-toggle="tab" data-bs-target="#comments"
+                    type="button" role="tab">💬 Comentários</button>
+            </li>
+        </ul>
+
+        <!-- Conteúdo das Tabs -->
+        <div class="tab-content mt-3">
+            <!-- Lista de capítulos -->
+            <div class="tab-pane fade show active" id="chapters" role="tabpanel">
+                <div class="chapter-card">
+                    <img src="../imagens/capas-manga/devilman-capa.jpg" class="chapter-img" alt="Capítulo 1">
+                    <div class="chapter-info">
+                        <h6>Capítulo 1</h6>
+                        <span class="chapter-date">06/08/2025</span>
+                    </div>
+                </div>
+                <div class="chapter-card">
+                    <img src="/imagens/capas-manga/devilman-capa.jpg" class="chapter-img" alt="Capítulo 2">
+                    <div class="chapter-info">
+                        <h6>Capítulo 2</h6>
+                        <span class="chapter-date">06/08/2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comentários -->
+            <div class="tab-pane fade" id="comments" role="tabpanel">
+                <div class="mt-3">
+                    <p>Seção de comentários em desenvolvimento...</p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
