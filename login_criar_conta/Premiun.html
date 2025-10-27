@@ -1,64 +1,295 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7OQ5L1Z9Ddbp+zZjzc/uD+2V5DkZyTtmI3U" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" href="../imagens/icon.png">
-    <link rel="js" href="../scrpit.js">
     <title>Premium - InkWave</title>
+    <link rel="icon" href="../imagens/icon.png" />
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+        }
+        .plan-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .plan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        .highlight-plan {
+            border: 2px solid #f43f5e;
+            position: relative;
+            overflow: hidden;
+        }
+        .highlight-plan::after {
+            content: "RECOMENDADO";
+            position: absolute;
+            top: 10px;
+            right: -30px;
+            background-color: #f43f5e;
+            color: white;
+            padding: 2px 30px;
+            font-size: 12px;
+            transform: rotate(45deg);
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-      <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark px-4 fixed-top">
-        <div class="container-fluid d-flex justify-content-between align-items-center">
-          <a class="navbar-brand d-flex align-items-center" href="../index.html">
-            <img src="../imagens/icon.png" alt="InkWave" width="40" height="40" class="me-2">
-            <span id="logoText">
-              <strong class="text-danger">Ink</strong><strong class="text-light">Wave</strong>
-            </span>
-          </a>
-  
-            <div class="position-relative">
-              <button id="userIcon" class="btn btn-outline-light rounded-circle">
-                <i class="bi bi-person"></i>
-              </button>
-  
-              <div id="userMenu" class="position-absolute end-0 mt-2 bg-dark text-light border rounded shadow-sm p-2"
-                style="display: none; min-width: 150px; z-index: 1000;">
-                <a href="../login_criar_conta/login.html" class="dropdown-item text-light">Entrar</a>
-                <a href="../login_criar_conta/sign-up.html" class="dropdown-item text-light">Criar Conta</a>
-              </div>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <!-- Header -->
+    <header class="sticky top-0 z-50">
+        <nav class="bg-gray-800 shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <img src="../imagens/icon.png" alt="InkWave" class="h-10 w-10">
+                        </div>
+                        <div class="hidden md:block">
+                            <div class="ml-2 flex items-baseline space-x-4">
+                                <a href="../index.html" class="text-xl font-bold">
+                                    <span class="text-red-500">Ink</span><span class="text-white">Wave</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User Menu -->
+                    <div class="relative ml-4">
+                        <button id="userIcon" class="flex items-center justify-center h-10 w-10 rounded-full border border-gray-600 hover:bg-gray-700 focus:outline-none">
+                            <i class="bi bi-person text-lg"></i>
+                        </button>
+                        
+                        <div id="userMenu" class="hidden absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50 border border-gray-700">
+                            <a href="../login_criar_conta/login.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Entrar</a>
+                            <a href="../login_criar_conta/sign-up.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">Criar Conta</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-      </nav>
+        </nav>
     </header>
 
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Hero Section -->
+        <section class="gradient-bg rounded-xl p-8 md:p-12 mb-12 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                <span class="text-red-500">Eleve</span> sua experiência de leitura
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Desbloqueie todos os recursos premium e aproveite mangás sem limites!
+            </p>
+            <div class="flex justify-center space-x-4">
+                <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                    Assinar agora
+                </button>
+                <button class="bg-transparent border border-gray-400 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Saiba mais
+                </button>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">
+                Por que se tornar <span class="text-red-500">Premium</span>?
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-xl">
+                    <div class="text-red-500 text-4xl mb-4">
+                        <i class="bi bi-book"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Acesso Ilimitado</h3>
+                    <p class="text-gray-300">Leia todos os mangás sem restrições, incluindo lançamentos exclusivos.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl">
+                    <div class="text-red-500 text-4xl mb-4">
+                        <i class="bi bi-megaphone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Sem Anúncios</h3>
+                    <p class="text-gray-300">Experiência de leitura limpa e imersiva, sem interrupções.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl">
+                    <div class="text-red-500 text-4xl mb-4">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Comunidade</h3>
+                    <p class="text-gray-300">Participe de discussões exclusivas e eventos com outros fãs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section>
+            <h2 class="text-3xl font-bold mb-8 text-center">
+                Escolha seu <span class="text-red-500">Plano</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Monthly Plan -->
+                <div class="plan-card bg-gray-800 p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-4">Plano Mensal</h3>
+                    <div class="text-4xl font-bold mb-6">R$ 4,99<span class="text-lg text-gray-400">/mês</span></div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="bi bi-check-circle-fill text-green-500 mr-2"></i>
+                            <span>Acesso a todos os mangás</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="bi bi-check-circle-fill text-green-500 mr-2"></i>
+                            <span>Leitura sem anúncios</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="bi bi-check-circle-fill text-green-500 mr-2"></i>
+                            <span>Atualizações diárias</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                        Assinar Mensal
+                    </button>
+                </div>
+
+                <!-- Annual Plan (Recommended) -->
+                <div class="plan-card highlight-plan bg-gray-800 p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-4">Plano Anual</h3>
+                    <div class="text-4xl font-bold mb-6">R$ 41,99<span class="text-lg text-gray-400">/ano</span></div>
+                    <div class="text-green-400 font-medium mb-4">Economize 16%</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="bi bi-check-circle-fill text-green-500 mr-2"></i>
+                            <span>Todos os benefícios do mensal</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="bi bi-check-circle-fill text-green-500 mr-2"></i>
+                            <span>Badge exclusivo no perfil</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="bi bi-check-circle-fill text-green-500 mr-2"></i>
+                            <span>Acesso antecipado a novos recursos</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300 transform hover:scale-105">
+                        Assinar Anual
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="mt-20 max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">
+                Perguntas <span class="text-red-500">Frequentes</span>
+            </h2>
+            <div class="space-y-4">
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-medium">Como faço para cancelar minha assinatura?</h3>
+                        <i class="bi bi-chevron-down text-red-500"></i>
+                    </button>
+                    <div class="mt-4 text-gray-300 hidden">
+                        <p>Você pode cancelar sua assinatura a qualquer momento nas configurações da sua conta. Seu acesso permanecerá ativo até o final do período atual.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-medium">Posso mudar de plano depois de assinar?</h3>
+                        <i class="bi bi-chevron-down text-red-500"></i>
+                    </button>
+                    <div class="mt-4 text-gray-300 hidden">
+                        <p>Sim, você pode atualizar ou downgrade seu plano a qualquer momento. As alterações serão aplicadas no próximo ciclo de cobrança.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-6">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-medium">Há algum período de teste gratuito?</h3>
+                        <i class="bi bi-chevron-down text-red-500"></i>
+                    </button>
+                    <div class="mt-4 text-gray-300 hidden">
+                        <p>Atualmente oferecemos um período de teste de 7 dias para novos assinantes. Você pode cancelar a qualquer momento durante este período sem custos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">
+                        <span class="text-red-500">Ink</span><span class="text-white">Wave</span>
+                    </h3>
+                    <p class="text-gray-400">A melhor plataforma para leitura de mangás online.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Navegação</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Início</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Mangás</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Gêneros</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Premium</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Suporte</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Central de Ajuda</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Termos de Uso</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Política de Privacidade</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="bi bi-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 InkWave. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-          const userIcon = document.getElementById('userIcon');
-          const userMenu = document.getElementById('userMenu');
-    
-          userIcon.addEventListener('click', (e) => {
-            e.stopPropagation();
-            userMenu.style.display = (userMenu.style.display === 'block') ? 'none' : 'block';
-          });
-    
-          document.addEventListener('click', (e) => {
-            if (!userMenu.contains(e.target) && e.target !== userIcon) {
-              userMenu.style.display = 'none';
-            }
-          });
-        });
-      </script>
-</body>
+            // User menu toggle
+            const userIcon = document.getElementById('userIcon');
+            const userMenu = document.getElementById('userMenu');
 
+            userIcon.addEventListener('click', (e) => {
+                e.stopPropagation();
+                userMenu.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!userMenu.contains(e.target) && e.target !== userIcon) {
+                    userMenu.classList.add('hidden');
+                }
+            });
+
+            // FAQ accordion
+            const faqButtons = document.querySelectorAll('footer + section button');
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    answer.classList.toggle('hidden');
+                    
+                    const icon = button.querySelector('i');
+                    icon.classList.toggle('bi-chevron-down');
+                    icon.classList.toggle('bi-chevron-up');
+                });
+            });
+        });
+    </script>
+</body>
 </html>
