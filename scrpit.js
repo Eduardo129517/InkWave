@@ -42,3 +42,19 @@ function berserk() {
 function bluelock() {
   window.open('sites-mangas/blue-lock-manga.html', '_self');
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const userIcon = document.getElementById('userIcon');
+  const userMenu = document.getElementById('userMenu');
+
+  userIcon.addEventListener('click', (e) => {
+    e.stopPropagation();
+    userMenu.style.display = (userMenu.style.display === 'block') ? 'none' : 'block';
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!userMenu.contains(e.target) && e.target !== userIcon) {
+      userMenu.style.display = 'none';
+    }
+  });
+});
